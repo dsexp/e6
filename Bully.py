@@ -21,6 +21,8 @@ class BullyAlgorithm:
         for i in range(self.nodeId+1, len(self.nodes)+1):
             if i in self.nodes:
                 print("Node ", self.nodeId,"Received Ok message from Node",i)
+                
+                highestNodeID = i
 
         # if there is a higherID node then send "coordinator" message to that node
         if highestNodeID != self.nodeId:
